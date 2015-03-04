@@ -1,0 +1,60 @@
+2015-02-04 21:03:15.277 rewardtracking[13399:5567197] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Data/Application/461DC4B9-17F1-4541-AE6C-039785A0B2CC/Library/Cookies/Cookies.binarycookies
+2015-02-04 21:03:15.527 rewardtracking[13399:5567197] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-04 21:03:15.527 rewardtracking[13399:5567197] Multi-tasking -> Device: YES, App: YES
+2015-02-04 21:03:15.541 rewardtracking[13399:5567197] Unlimited access to network resources
+2015-02-04 21:03:15.994 rewardtracking[13399:5567197] [CDVTimer][keyboard] 0.055015ms
+2015-02-04 21:03:15.994 rewardtracking[13399:5567197] [CDVTimer][TotalPluginStartup] 0.212014ms
+2015-02-04 21:03:16.712 rewardtracking[13399:5567197] Resetting plugins due to page load.
+2015-02-04 21:03:16.942 rewardtracking[13399:5567197] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/2915E084-0B4B-4CA4-A1B8-90FF1F33C047/rewardtracking.app/www/index.html#/tab/dash
+2015-02-04 21:10:13.253 rewardtracking[15800:5575661] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Data/Application/363FADF5-A59D-49E3-BBC8-5D46CAB34B34/Library/Cookies/Cookies.binarycookies
+2015-02-04 21:10:13.360 rewardtracking[15800:5575661] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-04 21:10:13.360 rewardtracking[15800:5575661] Multi-tasking -> Device: YES, App: YES
+2015-02-04 21:10:13.361 rewardtracking[15800:5575661] Unlimited access to network resources
+2015-02-04 21:10:13.506 rewardtracking[15800:5575661] [CDVTimer][keyboard] 0.048041ms
+2015-02-04 21:10:13.506 rewardtracking[15800:5575661] [CDVTimer][TotalPluginStartup] 0.184000ms
+2015-02-04 21:10:13.548 rewardtracking[15800:5575661] Resetting plugins due to page load.
+2015-02-04 21:10:13.700 rewardtracking[15800:5575661] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/44A42010-8F55-4D92-A988-95D8E0E95173/rewardtracking.app/www/index.html#/tab/home
+2015-02-11 15:22:59.629 rewardtracking[89784:1140247] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-11 15:22:59.631 rewardtracking[89784:1140247] Multi-tasking -> Device: YES, App: YES
+2015-02-11 15:22:59.648 rewardtracking[89784:1140247] Unlimited access to network resources
+2015-02-11 15:23:00.070 rewardtracking[89784:1140247] [CDVTimer][keyboard] 0.059009ms
+2015-02-11 15:23:00.070 rewardtracking[89784:1140247] [CDVTimer][TotalPluginStartup] 0.223041ms
+2015-02-11 15:23:00.282 rewardtracking[89784:1140247] Resetting plugins due to page load.
+2015-02-11 15:23:00.515 rewardtracking[89784:1140247] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/97F47EC3-0AC0-4891-A612-E91579122B18/rewardtracking.app/www/index.html#/tab/home
+2015-02-22 12:55:16.576 rewardtracking[9257:928271] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 12:55:16.578 rewardtracking[9257:928271] Multi-tasking -> Device: YES, App: YES
+2015-02-22 12:55:16.592 rewardtracking[9257:928271] Unlimited access to network resources
+2015-02-22 12:55:17.020 rewardtracking[9257:928271] [CDVTimer][keyboard] 0.050962ms
+2015-02-22 12:55:17.020 rewardtracking[9257:928271] [CDVTimer][TotalPluginStartup] 0.223994ms
+2015-02-22 12:55:17.233 rewardtracking[9257:928271] Resetting plugins due to page load.
+2015-02-22 12:55:17.456 rewardtracking[9257:928271] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/7F6F6F1F-DF74-42B8-94DF-CFB53CA6B292/rewardtracking.app/www/index.html#/tab/home
+2015-02-22 12:55:59.977 rewardtracking[9257:928271] Resetting plugins due to page load.
+2015-02-22 12:56:00.758 rewardtracking[9257:928271] Finished load of: https://www.facebook.com/dialog/oauth?client_id=877506732271773&redirect_uri=file:///Users/oauthcallback.html&response_type=token&scope=email,publish_actions
+2015-02-22 12:58:05.122 rewardtracking[10859:931611] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 12:58:05.122 rewardtracking[10859:931611] Multi-tasking -> Device: YES, App: YES
+2015-02-22 12:58:05.123 rewardtracking[10859:931611] Unlimited access to network resources
+2015-02-22 12:58:05.271 rewardtracking[10859:931611] [CDVTimer][keyboard] 0.054002ms
+2015-02-22 12:58:05.271 rewardtracking[10859:931611] [CDVTimer][TotalPluginStartup] 0.190973ms
+2015-02-22 12:58:05.315 rewardtracking[10859:931611] Resetting plugins due to page load.
+2015-02-22 12:58:05.457 rewardtracking[10859:931611] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/3CE31BF8-3FEF-470C-9789-69EECE69B184/rewardtracking.app/www/index.html#/tab/home
+2015-02-22 12:58:16.556 rewardtracking[12351:933441] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 12:58:16.556 rewardtracking[12351:933441] Multi-tasking -> Device: YES, App: YES
+2015-02-22 12:58:16.557 rewardtracking[12351:933441] Unlimited access to network resources
+2015-02-22 12:58:16.700 rewardtracking[12351:933441] [CDVTimer][keyboard] 0.050962ms
+2015-02-22 12:58:16.701 rewardtracking[12351:933441] [CDVTimer][TotalPluginStartup] 0.186026ms
+2015-02-22 12:58:16.743 rewardtracking[12351:933441] Resetting plugins due to page load.
+2015-02-22 12:58:16.879 rewardtracking[12351:933441] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/D8EA4E0E-EA6E-4B7F-B6FB-E53D500DF5D1/rewardtracking.app/www/index.html#/tab/home
+2015-02-22 13:01:34.748 rewardtracking[13936:937085] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 13:01:34.749 rewardtracking[13936:937085] Multi-tasking -> Device: YES, App: YES
+2015-02-22 13:01:34.750 rewardtracking[13936:937085] Unlimited access to network resources
+2015-02-22 13:01:34.892 rewardtracking[13936:937085] [CDVTimer][keyboard] 0.051975ms
+2015-02-22 13:01:34.892 rewardtracking[13936:937085] [CDVTimer][TotalPluginStartup] 0.227988ms
+2015-02-22 13:01:34.935 rewardtracking[13936:937085] Resetting plugins due to page load.
+2015-02-22 13:01:35.067 rewardtracking[13936:937085] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/9BC1601B-A253-41CF-85CD-C4D6E53525C2/rewardtracking.app/www/index.html#/tab/home
+2015-02-22 14:06:35.011 rewardtracking[19109:999376] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-22 14:06:35.012 rewardtracking[19109:999376] Multi-tasking -> Device: YES, App: YES
+2015-02-22 14:06:35.013 rewardtracking[19109:999376] Unlimited access to network resources
+2015-02-22 14:06:35.156 rewardtracking[19109:999376] [CDVTimer][keyboard] 0.050008ms
+2015-02-22 14:06:35.156 rewardtracking[19109:999376] [CDVTimer][TotalPluginStartup] 0.184000ms
+2015-02-22 14:06:35.196 rewardtracking[19109:999376] Resetting plugins due to page load.
+2015-02-22 14:06:35.324 rewardtracking[19109:999376] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/FAA84A7D-8F0C-41CE-9979-10D9342C58D3/rewardtracking.app/www/index.html#/tab/home

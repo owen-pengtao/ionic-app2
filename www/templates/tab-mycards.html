@@ -1,0 +1,22 @@
+<ion-view hide-nav-bar="true">
+  <ion-header-bar>
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-minus-outline"
+        ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+    </div>
+    <h1 class="title">My Cards</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="data.showDelete">
+      <ion-item class="item-avatar" ng-repeat="card in myCards" type="item-text-wrap" href="#/tab/mycards/{{card.id}}">
+        <img ng-src="{{item.img}}">
+        <h2>{{card.aliasName}}</h2>
+        <p>{{card.bankName}}</p>
+        <span class="badge badge-assertive">{{card.point}}</span>
+
+        <ion-delete-button class="ion-minus-circled" ng-click="deleteCard(card)"></ion-delete-button>
+        <ion-option-button class="button-assertive" ng-click="deleteCard(card)">Delete</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

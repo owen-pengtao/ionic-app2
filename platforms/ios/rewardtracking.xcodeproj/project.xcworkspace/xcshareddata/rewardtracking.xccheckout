@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>774EDEE8-21FE-416C-B412-C6C6F1053E4C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rewardtracking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0118D304492C154CAE866FC14DBD538163C5C509</key>
+		<string>https://github.com/owen-pengtao/ionic-app1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/rewardtracking.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0118D304492C154CAE866FC14DBD538163C5C509</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/owen-pengtao/ionic-app1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0118D304492C154CAE866FC14DBD538163C5C509</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0118D304492C154CAE866FC14DBD538163C5C509</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rewardtracking</string>
+		</dict>
+	</array>
+</dict>
+</plist>
