@@ -101,3 +101,26 @@
 2015-03-05 13:23:15.039 sell[46544:1976216] Resetting plugins due to page load.
 2015-03-05 13:23:15.269 sell[46544:1976216] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/637A0490-817B-432B-9FE3-42E6A1B03C0C/sell.app/www/index.html#/tab/home
 2015-03-05 13:23:38.051 sell[46544:1976216] THREAD WARNING: ['Keyboard'] took '39.876953' ms. Plugin should use a background thread.
+2015-03-05 17:30:21.814 sell[57721:2101895] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Data/Application/2E5CF6A3-CF93-44D2-BD09-7E31F7947B34/Library/Cookies/Cookies.binarycookies
+2015-03-05 17:30:22.253 sell[57721:2101895] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 17:30:22.254 sell[57721:2101895] Multi-tasking -> Device: YES, App: YES
+2015-03-05 17:30:22.268 sell[57721:2101895] Unlimited access to network resources
+2015-03-05 17:30:22.681 sell[57721:2101895] [CDVTimer][keyboard] 0.101030ms
+2015-03-05 17:30:22.681 sell[57721:2101895] [CDVTimer][TotalPluginStartup] 0.366986ms
+2015-03-05 17:30:23.385 sell[57721:2101895] Resetting plugins due to page load.
+2015-03-05 17:30:23.594 sell[57721:2101895] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/CF6ADEF1-1DCA-40E2-A9A5-BCAD0074BAB2/sell.app/www/index.html#/tab/home
+2015-03-05 17:30:49.069 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:30:55.330 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:30:56.244 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:31:05.838 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:31:11.072 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:31:20.070 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:31:22.928 sell[57721:2101895] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-03-05 17:33:13.051 sell[59341:2105781] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Data/Application/1E8CEC93-7ABE-433D-8BC5-A39C7EA7088C/Library/Cookies/Cookies.binarycookies
+2015-03-05 17:33:13.217 sell[59341:2105781] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 17:33:13.217 sell[59341:2105781] Multi-tasking -> Device: YES, App: YES
+2015-03-05 17:33:13.218 sell[59341:2105781] Unlimited access to network resources
+2015-03-05 17:33:13.368 sell[59341:2105781] [CDVTimer][keyboard] 0.048041ms
+2015-03-05 17:33:13.368 sell[59341:2105781] [CDVTimer][TotalPluginStartup] 0.197053ms
+2015-03-05 17:33:13.445 sell[59341:2105781] Resetting plugins due to page load.
+2015-03-05 17:33:13.576 sell[59341:2105781] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/0CD550AD-3517-4B6E-BD21-B2D59B0FB187/sell.app/www/index.html#/tab/home

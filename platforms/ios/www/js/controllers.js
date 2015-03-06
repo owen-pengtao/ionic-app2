@@ -3,10 +3,10 @@ function round2(number,fractionDigits){
 }
 angular.module('starter.controllers', ['starter.services'])
 
-  .controller('HomeCtrl', function ($scope, Settings) {
+  .controller('HomeCtrl', function ($scope, Settings, Duty) {
       "use strict";
-      $scope.rate = Settings.rate;
-      $scope.tax  = Settings.tax;
+      $scope.settings  = Settings;
+      $scope.duty  = Duty;
       $scope.goods = {
         tagPrice    : 279,
         couponStore : 0,
@@ -19,8 +19,8 @@ angular.module('starter.controllers', ['starter.services'])
         off   : 0
       };
       $scope.express = {
-        duty  : 10,
-        us    : 20,
+        duty  : 0.1,
+        us    : 12,
         cn    : 10,
         other : 0
       };
@@ -31,7 +31,9 @@ angular.module('starter.controllers', ['starter.services'])
       $scope.offs = offs;
 
       $scope.calculatePrice = function() {
-        $scope.goods.couponStore = $scope.goods.tagPrice * (1 - $scope.coupon.store/100);
+        if ($scope.coupon.store) {
+          $scope.goods.couponStore = $scope.goods.tagPrice * (1 - $scope.coupon.store/100);
+        }
 
         if ($scope.coupon.money) {
           $scope.goods.couponMoney = Math.abs($scope.coupon.money);
@@ -40,7 +42,8 @@ angular.module('starter.controllers', ['starter.services'])
           $scope.goods.couponOff = round2($scope.goods.tagPrice * $scope.coupon.off / 100, 2);
         }
         $scope.goods.coupon = $scope.goods.couponStore + $scope.goods.couponMoney + $scope.goods.couponOff;
-        $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.coupon) * (1 + $scope.tax/100), 2);
+
+        $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.coupon) * (1 + $scope.settings.tax/100), 2);
         return $scope.goods.purchasePrice;
       };
   })
