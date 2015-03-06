@@ -28,7 +28,7 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
-    <name>rewardtracking</name>
+    <name>sell</name>
     <description>
         An Ionic Framework and Cordova project.
     </description>

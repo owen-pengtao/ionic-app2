@@ -58,3 +58,46 @@
 2015-02-22 14:06:35.156 rewardtracking[19109:999376] [CDVTimer][TotalPluginStartup] 0.184000ms
 2015-02-22 14:06:35.196 rewardtracking[19109:999376] Resetting plugins due to page load.
 2015-02-22 14:06:35.324 rewardtracking[19109:999376] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/FAA84A7D-8F0C-41CE-9979-10D9342C58D3/rewardtracking.app/www/index.html#/tab/home
+2015-03-05 00:43:26.640 sell[35451:1824730] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 00:43:26.644 sell[35451:1824730] Multi-tasking -> Device: YES, App: YES
+2015-03-05 00:43:26.664 sell[35451:1824730] Unlimited access to network resources
+2015-03-05 00:43:27.159 sell[35451:1824730] [CDVTimer][keyboard] 0.054002ms
+2015-03-05 00:43:27.159 sell[35451:1824730] [CDVTimer][TotalPluginStartup] 0.199020ms
+2015-03-05 00:43:27.404 sell[35451:1824730] Resetting plugins due to page load.
+2015-03-05 00:43:27.655 sell[35451:1824730] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/057E02E6-0DDE-42E0-A869-37535470120A/sell.app/www/index.html#/tab/home
+2015-03-05 00:44:29.872 sell[37006:1827756] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 00:44:29.874 sell[37006:1827756] Multi-tasking -> Device: YES, App: YES
+2015-03-05 00:44:29.875 sell[37006:1827756] Unlimited access to network resources
+2015-03-05 00:44:30.021 sell[37006:1827756] [CDVTimer][keyboard] 0.047982ms
+2015-03-05 00:44:30.021 sell[37006:1827756] [CDVTimer][TotalPluginStartup] 0.181019ms
+2015-03-05 00:44:30.109 sell[37006:1827756] Resetting plugins due to page load.
+2015-03-05 00:44:30.240 sell[37006:1827756] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/E35DAF1B-E857-4F51-BD71-A2373B8B81D2/sell.app/www/index.html#/tab/home
+2015-03-05 00:47:02.779 sell[38548:1831209] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 00:47:02.780 sell[38548:1831209] Multi-tasking -> Device: YES, App: YES
+2015-03-05 00:47:02.781 sell[38548:1831209] Unlimited access to network resources
+2015-03-05 00:47:02.923 sell[38548:1831209] [CDVTimer][keyboard] 0.045002ms
+2015-03-05 00:47:02.923 sell[38548:1831209] [CDVTimer][TotalPluginStartup] 0.180006ms
+2015-03-05 00:47:03.007 sell[38548:1831209] Resetting plugins due to page load.
+2015-03-05 00:47:03.132 sell[38548:1831209] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/BE471FDC-4E2F-4FF6-B250-458CD601BAF3/sell.app/www/index.html#/tab/home
+2015-03-05 00:48:09.129 sell[40097:1833833] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 00:48:09.129 sell[40097:1833833] Multi-tasking -> Device: YES, App: YES
+2015-03-05 00:48:09.130 sell[40097:1833833] Unlimited access to network resources
+2015-03-05 00:48:09.269 sell[40097:1833833] [CDVTimer][keyboard] 0.045002ms
+2015-03-05 00:48:09.269 sell[40097:1833833] [CDVTimer][TotalPluginStartup] 0.176966ms
+2015-03-05 00:48:09.345 sell[40097:1833833] Resetting plugins due to page load.
+2015-03-05 00:48:09.476 sell[40097:1833833] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/24D5C923-1F55-4F6C-B144-525D06EDA1D7/sell.app/www/index.html#/tab/home
+2015-03-05 10:51:05.590 sell[43910:1901747] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 10:51:05.591 sell[43910:1901747] Multi-tasking -> Device: YES, App: YES
+2015-03-05 10:51:05.606 sell[43910:1901747] Unlimited access to network resources
+2015-03-05 10:51:06.069 sell[43910:1901747] [CDVTimer][keyboard] 0.052035ms
+2015-03-05 10:51:06.069 sell[43910:1901747] [CDVTimer][TotalPluginStartup] 0.203013ms
+2015-03-05 10:51:06.281 sell[43910:1901747] Resetting plugins due to page load.
+2015-03-05 10:51:06.661 sell[43910:1901747] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/B9D7C841-1BF8-43B5-84E8-19E7F960F5E8/sell.app/www/index.html#/tab/home
+2015-03-05 13:23:14.394 sell[46544:1976216] Apache Cordova native platform version 3.7.0 is starting.
+2015-03-05 13:23:14.395 sell[46544:1976216] Multi-tasking -> Device: YES, App: YES
+2015-03-05 13:23:14.413 sell[46544:1976216] Unlimited access to network resources
+2015-03-05 13:23:14.844 sell[46544:1976216] [CDVTimer][keyboard] 0.063002ms
+2015-03-05 13:23:14.844 sell[46544:1976216] [CDVTimer][TotalPluginStartup] 0.234008ms
+2015-03-05 13:23:15.039 sell[46544:1976216] Resetting plugins due to page load.
+2015-03-05 13:23:15.269 sell[46544:1976216] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/D41809F8-80AA-46C0-8864-A79FDEFE6ECC/data/Containers/Bundle/Application/637A0490-817B-432B-9FE3-42E6A1B03C0C/sell.app/www/index.html#/tab/home
+2015-03-05 13:23:38.051 sell[46544:1976216] THREAD WARNING: ['Keyboard'] took '39.876953' ms. Plugin should use a background thread.

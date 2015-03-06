@@ -1,38 +1,92 @@
 <ion-view view-title="Welcome">
-  <ion-content class="padding">
-    <div class="list" ng-hide="isLogin">
-      <form ng-submit="doLogin()">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </form>
-      <label class="item">
-        <button class="button button-block button-positive" ng-click="fbLogin()">
-          Login with Facebook
-        </button>
-      </label>
-    </div>
-    <div class="list card" ng-show="isLogin">
-      <div class="item">
-        <h2>Name: {{user.name}}</h2>
-      </div>
-      <div class="item item-body">
-        <img
-          src="http://graph.facebook.com/{{user.id}}/picture?width=270&height=270"/>
-      </div>
-      <label class="item">
-        <button class="button button-block button-positive" ng-click="fbLogout()">
-          Logout with Facebook
-        </button>
-      </label>
-    </div>
-  </ion-content>
+    <ion-content class="padding">
+        <div class="list">
+            <form>
+                <div class="row item">
+                    <label class="item-input row col-50">
+                        <span class="input-label">标签价格</span>
+                        <input type="number" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">消费税</span>
+                        <input type="text" ng-model="tax" ng-change="calculatePrice()">
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-67">
+                        <span class="input-label">店内折扣</span>
+                        <select class="input-label" ng-model="coupon.store" ng-change="calculatePrice()">
+                            <option ng-repeat="off in offs track by $index" ng-selected="{{off==coupon.store}}" ng-value="off">{{off}}%</option>
+                        </select>
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">优惠: {{goods.couponStore | currency}}</span>
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-50">
+                        <span class="input-label">现金优惠券</span>
+                        <input type="number" ng-model="coupon.money" ng-change="calculatePrice()">
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">优惠: {{goods.couponMoney | currency}}</span>
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-50">
+                        <span class="input-label">折扣优惠券</span>
+                        <select ng-model="coupon.off" ng-change="calculatePrice()">
+                            <option ng-repeat="off in offs track by $index" ng-selected="{{off==coupon.off}}" ng-value="off">{{off}}%</option>
+                        </select>
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">优惠: {{goods.couponOff | currency}}</span>
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row">
+                        <span class="input-label">共优惠：{{goods.coupon | currency}}， {{goods.coupon * rate | currency:"￥"}}</span>
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row">
+                        <span class="input-label">采购成本价：{{goods.purchasePrice | currency}}，{{goods.purchasePrice * rate | currency:"￥"}}</span>
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-50">
+                        <span class="input-label">关税比例：</span>
+                        <input type="text" ng-model="express.duty" ng-change="calculatePrice()">
+                        <span class="input-label"></span>
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">美国快递：</span>
+                        <input type="text" ng-model="express.us" ng-change="calculatePrice()">
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-50">
+                        <span class="input-label">中国快递：</span>
+                        <input type="text" ng-model="express.cn" ng-change="calculatePrice()">
+                    </label>
+                    <label class="item-input">
+                        <span class="input-label">其他成本：</span>
+                        <input type="text" ng-model="express.other" ng-change="calculatePrice()">
+                    </label>
+                </div>
+                <div class="row item">
+                    <label class="item-input row col-4">
+                        <span class="input-label">国内成本价：
+                            {{(goods.purchasePrice*(1+express.duty/100) + express.us)*rate + express.cn | currency:"￥"}}
+                        </span>
+                    </label>
+                </div>
+                <label class="row item">
+                    <button class="button button-block button-positive" ng-click="calculatePrice()">Calculate</button>
+                </label>
+            </form>
+
+        </div>
+
+    </ion-content>
 </ion-view>

@@ -1,53 +1,48 @@
+function round2(number,fractionDigits){
+  return Math.round(number*Math.pow(10,fractionDigits))/Math.pow(10,fractionDigits);
+}
 angular.module('starter.controllers', ['starter.services'])
 
-  .controller('HomeCtrl', function ($scope, User) {
-    "use strict";
-    $scope.isLogin = false;
+  .controller('HomeCtrl', function ($scope, Settings) {
+      "use strict";
+      $scope.rate = Settings.rate;
+      $scope.tax  = Settings.tax;
+      $scope.goods = {
+        tagPrice    : 279,
+        couponStore : 0,
+        couponMoney : 0,
+        couponOff   : 0
+      };
+      $scope.coupon = {
+        store : 50,
+        money : 0,
+        off   : 0
+      };
+      $scope.express = {
+        duty  : 10,
+        us    : 20,
+        cn    : 10,
+        other : 0
+      };
+      var offs = [];
+      for (var i = 0, sum = 100; i < sum; i = i + 5) {
+        offs.push(i);
+      }
+      $scope.offs = offs;
 
-    $scope.doLogin = function () {
-      User.login().then(function(data){
-        $scope.isLogin = true;
-        var _user = {
-          id : data.id,
-          name: data.name
-        };
-        $scope.user    = _user;
-        User.set(_user);
-      });
-    };
-    $scope.fbLogin = function () {
-      openFB.login(
-        function (response) {
-          if (response.status === 'connected') {
-            console.log('Facebook login succeeded');
-            $scope.isLogin = true;
-            $scope.getMe();
-          } else {
-            alert('Facebook login failed');
-          }
-        },
-        {scope: 'email,publish_actions'});
-    };
-    $scope.fbLogout = function () {
-      openFB.logout(
-        function () {
-          $scope.isLogin = false;
-        });
-    };
-    $scope.getMe = function () {
-      openFB.api({
-        path: '/me',
-        params: {fields: 'id,name'},
-        success: function (user) {
-          $scope.isLogin = true;
-          $scope.user    = user;
-          $scope.$apply(function () {
-            User.set(user);
-          });
+      $scope.calculatePrice = function() {
+        $scope.goods.couponStore = $scope.goods.tagPrice * (1 - $scope.coupon.store/100);
+
+        if ($scope.coupon.money) {
+          $scope.goods.couponMoney = Math.abs($scope.coupon.money);
         }
-      });
-    };
-    $scope.getMe();
+        if ($scope.coupon.off) {
+          $scope.goods.couponOff = round2($scope.goods.tagPrice * $scope.coupon.off / 100, 2);
+        }
+        $scope.goods.coupon = $scope.goods.couponStore + $scope.goods.couponMoney + $scope.goods.couponOff;
+        $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.coupon) * (1 + $scope.tax/100), 2);
+        return $scope.goods.purchasePrice;
+      };
   })
 
   .controller('CardsCtrl', function ($scope, Cards, $state) {
@@ -90,8 +85,6 @@ angular.module('starter.controllers', ['starter.services'])
     $scope.myCard = MyCards.get($stateParams.myCardId);
   })
 
-  .controller('AccountCtrl', function ($scope) {
-    $scope.settings = {
-      enableFriends: true
-    };
+  .controller('SettingsCtrl', function ($scope, Settings) {
+    $scope.settings = Settings;
   });
