@@ -1,0 +1,40 @@
+<ion-view view-title="价格列表">
+  <ion-content>
+      <div class="row item">
+          <label class="item-input col-25">
+              <span class="input-label">起价</span>
+              <input class="sell-input-underline" type="text" ng-model="tagPrice.low" ng-change="calculatePrice()">
+          </label>
+          <label class="item-input col-25">
+              <span class="input-label">最高价</span>
+              <input class="sell-input-underline" type="text" ng-model="tagPrice.high" ng-change="calculatePrice()">
+          </label>
+          <label class="item-input col-25">
+              <span class="input-label">间隔</span>
+              <input class="sell-input-underline" type="text" ng-model="tagPrice.step" ng-change="calculatePrice()">
+          </label>
+          <label class="item-input col-25">
+              <span class="input-label">折扣%</span>
+              <input type="number" class="sell-input-underline" ng-model="tagPrice.off" ng-change="calculatePrice()">
+          </label>
+      </div>
+       <table class="sell-table">
+           <thead>
+               <tr>
+                   <th>标签价格</th>
+                   <th>折扣百分比</th>
+                   <th>折后价</th>
+                   <th>人民币</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr ng-repeat="price in prices" on-tap="onTapRow($event)">
+                   <td>{{ price | currency}}</td>
+                   <td>{{ tagPrice.off }}%</td>
+                   <td>{{ price * (1 - tagPrice.off/100) | currency}}</td>
+                   <td>{{ price * (1 - tagPrice.off/100) * settings.rate | currency:"￥"}}</td>
+               </tr>
+           </tbody>
+       </table>
+  </ion-content>
+</ion-view>

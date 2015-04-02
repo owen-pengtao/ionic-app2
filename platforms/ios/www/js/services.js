@@ -1,12 +1,33 @@
 angular.module('starter.services', [])
-/**
- * A simple example service that returns some data.
- */
-.factory('Settings', function() {
+.factory('Rate', function($http, $q) {
+    var deferred = $q.defer(), obj = {};
+    obj.getRate = function () {
+      $http.get('http://api.k780.com:88/?app=finance.rate&scur=USD&tcur=CNY&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json')
+        .success(function(data) {
+          deferred.resolve(data.result);
+        })
+        .error(function (e, status) {
+          deferred.reject(e, status);
+        });
+      return deferred.promise;
+    };
+    return obj;
+})
+.factory('Settings', function($localstorage, Rate) {
   var settings = {
-    "rate" : 6.28,
-    "tax"  : 8.75
-  };
+      "rate" : 6.28,
+      "tax"  : 8.75,
+      "duty" : 0.1
+    };
+  if (Object.keys($localstorage.getObject("settings")).length) {
+    settings = $localstorage.getObject("settings");
+  }
+  Rate.getRate().then(function(data){
+    console.log("data: " + data.rate);
+    settings.rate = data.rate;
+  });
+
+  $localstorage.setObject("settings", settings);
   return settings;
 })
 .factory('Duty', function() {

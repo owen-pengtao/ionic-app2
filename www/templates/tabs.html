@@ -6,7 +6,7 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Home" icon-off="ion-ios7-home-outline" icon-on="ion-ios7-home" href="#/tab/home">
+  <ion-tab title="Home" icon-off="ion-ios7-home-outline" icon-on="ion-ios7-home" href="#/tab/home" on-select="onTabSelected()">
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
@@ -17,8 +17,8 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Mycards Tab -->
-  <ion-tab title="My Cards" icon-off="ion ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/mycards" on-select="onTabSelected()">
-    <ion-nav-view name="tab-mycards"></ion-nav-view>
+  <ion-tab title="Prices Lists" icon-off="ion ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/prices" on-select="onTabSelected()">
+    <ion-nav-view name="tab-prices"></ion-nav-view>
   </ion-tab>
 
 

@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+input.sell-input-underline{
+    border-bottom: 1px solid #C0C0C0;
+}
+.color-red{
+    color: #d4081a;
+}

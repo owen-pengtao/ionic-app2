@@ -1,45 +1,47 @@
-<ion-view view-title="Welcome">
+<ion-view view-title="商品成本计算">
     <ion-content class="padding">
         <div class="list">
-            <form>
+            <form name="priceForm">
+                <div class="row item">
+                    <label class="item-input row">
+                        <span class="input-label">标签价格</span>
+                        <input type="number" class="col-50 sell-input-underline" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                    </label>
+                </div>
                 <div class="row item">
                     <label class="item-input row col-50">
-                        <span class="input-label">标签价格</span>
-                        <input type="number" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                        <span class="input-label">消费税%</span>
+                        <input type="number" class="sell-input-underline" ng-model="settings.tax" ng-change="calculatePrice()">
                     </label>
-                    <label class="item-input">
-                        <span class="input-label">消费税</span>
-                        <input type="text" ng-model="settings.tax" ng-change="calculatePrice()">
+                    <label class="item-input col-50">
+                        <span class="input-label">汇率</span>
+                        <input type="number" class="sell-input-underline" ng-model="settings.rate" ng-change="calculatePrice()">
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">店内折扣券</span>
-                        <select class="col-33" ng-model="coupon.store" ng-change="calculatePrice()">
-                            <option ng-repeat="off in offs track by $index" ng-selected="{{off==coupon.store}}" ng-value="off">{{off}}%</option>
-                        </select>
-                        <span class="col">{{goods.couponStore | currency:" - $"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.couponStore" min="0" max="95" step="5" ng-change="calculatePrice()">
+                        <span class="col">{{goods.couponStore}}%, {{coupon.store | currency:" - $"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">折扣优惠券</span>
-                        <select class="col-33" ng-model="coupon.off" ng-change="calculatePrice()">
-                            <option ng-repeat="off in offs track by $index" ng-selected="{{off==coupon.off}}" ng-value="off">{{off}}%</option>
-                        </select>
-                        <span class="col">{{goods.couponOff | currency:" - $"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.couponOff" min="0" max="95" step="5" ng-change="calculatePrice()">
+                        <span class="col">{{goods.couponOff}}%, {{coupon.off | currency:" - $"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">现金优惠券</span>
-                        <input class="col-33" type="number" ng-model="coupon.money" ng-change="calculatePrice()">
-                        <span class="col">{{goods.couponMoney | currency:" - $"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.couponMoney" min="0" max="50" step="1" ng-change="calculatePrice()">
+                        <span class="col">{{coupon.money | currency:" - $"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
-                        <span class="input-label">共优惠：{{goods.coupon | currency}}，{{goods.coupon * settings.rate | currency:"￥"}}</span>
+                        <span class="input-label">共优惠：{{goods.couponCount | currency}}，{{goods.couponCount * settings.rate | currency:"￥"}}</span>
                     </label>
                 </div>
                 <div class="row item">
@@ -50,46 +52,43 @@
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">美国快递 $：</span>
-                        <input class="col-33" type="number" ng-model="express.us" ng-change="calculatePrice()">
-                        <span class="col">{{express.us * settings.rate | currency:"￥"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.expressUS" min="0" max="50" step="1" ng-change="calculatePrice()">
+                        <span class="col">{{goods.expressUS | currency}}, {{goods.expressUS * settings.rate | currency:"￥"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">中国快递￥：</span>
-                        <input class="col-33" type="number" ng-model="express.cn" ng-change="calculatePrice()">
-                        <span class="col">{{express.cn | currency:"￥"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.expressCN" min="0" max="50" step="1" ng-change="calculatePrice()">
+                        <span class="col">{{goods.expressCN | currency:"￥"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">关税比例：</span>
-                        <select class="col-33" ng-model="express.duty" ng-change="calculatePrice()">
-                            <option ng-repeat="d in duty track by $index" ng-selected="{{d.tax==express.duty}}" ng-value="{{d.tax}}">{{d.tax*100 + "%" + d.category}}</option>
-                        </select>
-                        <span class="col">{{goods.purchasePrice * express.duty * settings.rate | currency:"￥"}}</span>
+                        <input class="col-33" type="range" ng-model="goods.expressDuty" min="0" max="0.5" step="0.1" ng-change="calculatePrice()">
+                        <span class="col">{{goods.expressDuty*100}}%, {{goods.purchasePrice * goods.expressDuty * settings.rate | currency:"￥"}}</span>
                     </label>
                 </div>
                 <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">其他成本￥：</span>
-                        <input type="number" ng-model="express.other" ng-change="calculatePrice()">
-                        <span class="col">+ {{express.other | currency}}￥</span>
+                        <input class="col-33" type="range" ng-model="goods.expressOther" min="0" max="100" step="1" ng-change="calculatePrice()">
+                        <span class="col">{{goods.expressOther | currency:"￥"}}</span>
                     </label>
                 </div>
                 <div class="row item">
-                    <label class="item-input row col-4">
+                    <label class="item-input row">
                         <span class="input-label">国内成本价：
-                            {{(goods.purchasePrice*(1+express.duty) + express.us)*settings.rate + express.cn | currency:"￥"}}
+                            {{(goods.purchasePrice + goods.expressUS*1)*settings.rate + goods.expressCN*1+ goods.purchasePrice * goods.expressDuty * settings.rate  + goods.expressOther*1 | currency:"￥"}}
                         </span>
                     </label>
                 </div>
-                <label class="row item">
-                    <button class="button button-block button-positive" ng-click="calculatePrice()">Calculate</button>
+                <label class="row item text-center">
+                    <button class="button button-block button-positive col-50" ng-click="calculatePrice()">Calculate</button>
+                    <button class="button button-block button-positive col-50" ng-click="resetPrice()">Reset</button>
                 </label>
             </form>
-
         </div>
-
     </ion-content>
 </ion-view>

@@ -68,22 +68,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.mycards', {
-    url: '/mycards',
+  .state('tab.prices', {
+    url: '/prices',
     views: {
-      'tab-mycards': {
-        templateUrl: 'templates/tab-mycards.html',
-        controller: 'MyCardsCtrl'
-      }
-    }
-  })
-
-  .state('tab.mycard-detail', {
-    url: '/mycards/:myCardId',
-    views: {
-      'tab-mycards': {
-        templateUrl: 'templates/mycard-detail.html',
-        controller: 'MyCardDetailCtrl'
+      'tab-prices': {
+        templateUrl: 'templates/tab-prices.html',
+        controller: 'PricesCtrl'
       }
     }
   })
