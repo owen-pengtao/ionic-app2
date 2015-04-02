@@ -5,3 +5,29 @@ input.sell-input-underline{
 .color-red{
     color: #d4081a;
 }
+.sell-table{
+    width: 96%;
+    margin: 10px 2%;
+    text-align: center;
+}
+.sell-table tr {
+    height: 37px;
+    line-height: 20px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.sell-table thead th{
+    font-size: 16px;
+    width: 25%;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.sell-table tbody tr:nth-child(even){
+    background-color: #F9F9F9;
+}
+.sell-table tbody tr.selected{
+    background-color: #D9EDF7;
+}
+.sell-table tbody td{
+    font-size: 14px;
+    vertical-align: middle;
+}

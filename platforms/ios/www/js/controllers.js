@@ -8,8 +8,8 @@ angular.module('starter.controllers', ['starter.services'])
     $scope.settings  = Settings;
 
     $scope.goods = {
-      tagPrice    : 279,
-      couponStore : 50,
+      tagPrice    : 40,
+      couponStore : 0,
       couponMoney : 0,
       couponOff   : 0,
 
@@ -25,16 +25,15 @@ angular.module('starter.controllers', ['starter.services'])
     };
 
     $scope.calculatePrice = function() {
-      if ($scope.goods.couponStore) {
-        $scope.coupon.store = $scope.goods.tagPrice * (1 - $scope.goods.couponStore/100);
+      $scope.coupon.store = round2($scope.goods.tagPrice * $scope.goods.couponStore/100, 2);
+
+      if ($scope.goods.couponOff) {
+        $scope.coupon.off = round2(($scope.goods.tagPrice - $scope.coupon.store) * $scope.goods.couponOff / 100, 2);
       }
       if ($scope.goods.couponMoney) {
         $scope.coupon.money = Math.abs($scope.goods.couponMoney);
       }
-      if ($scope.goods.couponOff) {
-        $scope.coupon.off = round2($scope.goods.tagPrice * $scope.goods.couponOff / 100, 2);
-      }
-      $scope.goods.couponCount = $scope.coupon.store + $scope.coupon.money + $scope.coupon.off;
+      $scope.goods.couponCount = $scope.coupon.store + $scope.coupon.off + $scope.coupon.money;
 
       $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.couponCount) * (1 + $scope.settings.tax/100), 2);
       return $scope.goods.purchasePrice;
@@ -63,12 +62,28 @@ angular.module('starter.controllers', ['starter.services'])
 
   })
 
-  .controller('MyCardsCtrl', function ($scope, MyCards) {
-    $scope.myCards = MyCards.all();
-  })
+  .controller('PricesCtrl', function ($scope, Settings) {
+    "use strict";
+    $scope.settings  = Settings;
+    $scope.tagPrice = {
+      low  : 5,
+      high : 100,
+      step : 5,
+      off  : 20
+    };
+    $scope.prices = [];
 
-  .controller('MyCardDetailCtrl', function ($scope, $stateParams, MyCards) {
-    $scope.myCard = MyCards.get($stateParams.myCardId);
+      $scope.calculatePrice = function () {
+      var prices = [];
+      for (var i = $scope.tagPrice.low; i <= $scope.tagPrice.high; i = i + $scope.tagPrice.step) {
+        prices.push(i);
+      }
+      $scope.prices = prices;
+    };
+    $scope.calculatePrice();
+    $scope.onTapRow = function($event){
+      $event.currentTarget.className = $event.currentTarget.className ? "" : "selected";
+    };
   })
 
   .controller('SettingsCtrl', function ($scope, Settings, Duty, $localstorage) {
