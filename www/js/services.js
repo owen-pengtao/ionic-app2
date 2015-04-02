@@ -14,6 +14,7 @@ angular.module('starter.services', [])
     return obj;
 })
 .factory('Settings', function($localstorage, Rate) {
+  "use strict";
   var settings = {
       "rate" : 6.28,
       "tax"  : 8.75,
@@ -31,6 +32,7 @@ angular.module('starter.services', [])
   return settings;
 })
 .factory('Duty', function() {
+  "use strict";
   var duties = [{
     "category" : "箱包、鞋、配饰、食品、保健品、玩具、乐器、文具用品、其他",
     "tax" : "0.1"

@@ -7,6 +7,56 @@ angular.module('starter.controllers', ['starter.services'])
     "use strict";
     $scope.settings  = Settings;
 
+    $scope.tagPrice = {
+      low  : 5,
+      high : 100,
+      step : 5,
+      offStore  : 20,
+      offCoupon : 10,
+      offMoney  : 0
+    };
+    $scope.prices = [];
+    if (Object.keys($localstorage.getObject("prices")).length) {
+      $scope.tagPrice = $localstorage.getObject("prices");
+    }
+
+    $scope.calculatePrice = function () {
+      var prices = [], step = $scope.tagPrice.step || 1;
+      if ($scope.tagPrice.low < $scope.tagPrice.high) {
+        for (var i = $scope.tagPrice.low; i <= $scope.tagPrice.high; i = i + step) {
+          prices.push(i);
+        }
+        console.log(prices[prices.length - 1], $scope.tagPrice.high);
+        if (prices[prices.length - 1] < $scope.tagPrice.high) {
+          prices.push($scope.tagPrice.high);
+        }
+        $scope.prices = prices;
+        $localstorage.setObject("prices", $scope.tagPrice);
+      }
+    };
+    $scope.calculatePrice();
+    $scope.onTapRow = function($event){
+      $event.currentTarget.className = $event.currentTarget.className ? "" : "selected";
+    };
+  })
+
+  .controller('CardsCtrl', function ($scope, Cards, $state) {
+    $scope.cards = Cards.all();
+    $scope.remove = function (card) {
+      Cards.remove(card);
+    };
+    $scope.onTabSelected = function(){
+      $state.go("tab.cards");
+    };
+  })
+
+  .controller('CardDetailCtrl', function ($scope, $stateParams, User, Cards, $state, $ionicNavBarDelegate) {
+
+  })
+
+  .controller('PricesCtrl', function ($scope, Settings, $localstorage) {
+    "use strict";
+    $scope.settings  = Settings;
     $scope.goods = {
       tagPrice    : 40,
       couponStore : 0,
@@ -45,44 +95,6 @@ angular.module('starter.controllers', ['starter.services'])
     };
     $scope.onTabSelected = function() {
       console.log("onTabSelected");
-    };
-  })
-
-  .controller('CardsCtrl', function ($scope, Cards, $state) {
-    $scope.cards = Cards.all();
-    $scope.remove = function (card) {
-      Cards.remove(card);
-    };
-    $scope.onTabSelected = function(){
-      $state.go("tab.cards");
-    };
-  })
-
-  .controller('CardDetailCtrl', function ($scope, $stateParams, User, Cards, $state, $ionicNavBarDelegate) {
-
-  })
-
-  .controller('PricesCtrl', function ($scope, Settings) {
-    "use strict";
-    $scope.settings  = Settings;
-    $scope.tagPrice = {
-      low  : 5,
-      high : 100,
-      step : 5,
-      off  : 20
-    };
-    $scope.prices = [];
-
-      $scope.calculatePrice = function () {
-      var prices = [];
-      for (var i = $scope.tagPrice.low; i <= $scope.tagPrice.high; i = i + $scope.tagPrice.step) {
-        prices.push(i);
-      }
-      $scope.prices = prices;
-    };
-    $scope.calculatePrice();
-    $scope.onTapRow = function($event){
-      $event.currentTarget.className = $event.currentTarget.className ? "" : "selected";
     };
   })
 
