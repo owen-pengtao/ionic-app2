@@ -10,16 +10,19 @@ input.sell-input-underline{
     margin: 10px 2%;
     text-align: center;
 }
-.sell-table tr {
+.sell-table thead th{
     height: 37px;
     line-height: 20px;
+    font-size: 16px;
     border-bottom: 1px solid #CCCCCC;
-}
-.sell-table thead th{
-    font-size: 14px;
     width: 20%;
     vertical-align: middle;
     font-weight: bold;
+}
+.sell-table tbody tr {
+    height: 47px;
+    line-height: 20px;
+    border-bottom: 1px solid #CCCCCC;
 }
 .sell-table tbody tr:nth-child(even){
     background-color: #F9F9F9;
@@ -28,6 +31,6 @@ input.sell-input-underline{
     background-color: #D9EDF7;
 }
 .sell-table tbody td{
-    font-size: 12px;
+    font-size: 14px;
     vertical-align: middle;
 }

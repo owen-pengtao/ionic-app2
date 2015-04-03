@@ -62,6 +62,8 @@ angular.module('starter.controllers', ['starter.services'])
       couponStore : 0,
       couponMoney : 0,
       couponOff   : 0,
+      couponCount : 0,
+      purchasePrice : 0,
 
       expressDuty : 0,
       expressUS   : 0,
@@ -73,6 +75,11 @@ angular.module('starter.controllers', ['starter.services'])
       money : 0,
       off   : 0
     };
+    if (Object.keys($localstorage.getObject("priceHistory")).length) {
+      if ($localstorage.getObject("priceHistory").length > 0) {
+        $scope.goods = $localstorage.getObject("priceHistory").slice(-1)[0];
+      }
+    }
 
     $scope.calculatePrice = function() {
       $scope.coupon.store = round2($scope.goods.tagPrice * $scope.goods.couponStore/100, 2);
@@ -90,8 +97,12 @@ angular.module('starter.controllers', ['starter.services'])
     };
 
     $scope.calculatePrice();
-    $scope.resetPrice = function() {
-      $scope.goods = {};
+    $scope.savePrice = function() {
+      var priceHistory = Object.keys($localstorage.getObject("priceHistory")).length ? $localstorage.getObject("priceHistory") : [];
+      if (priceHistory.length && JSON.stringify(priceHistory.slice(-1)[0]) !== JSON.stringify($scope.goods)) {
+        priceHistory.push($scope.goods);
+        $localstorage.setObject("priceHistory", priceHistory);
+      }
     };
     $scope.onTabSelected = function() {
       console.log("onTabSelected");
