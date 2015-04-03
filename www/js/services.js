@@ -9,7 +9,7 @@ angular.module('starter.services', [])
         .error(function (e, status) {
           deferred.reject(e, status);
         });
-      return deferred.promise;
+        return deferred.promise;
     };
     return obj;
 })
@@ -24,8 +24,7 @@ angular.module('starter.services', [])
     settings = $localstorage.getObject("settings");
   }
   Rate.getRate().then(function(data){
-    console.log("data: " + data.rate);
-    settings.rate = data.rate;
+    settings.rate = Number(data.rate);
   });
 
   $localstorage.setObject("settings", settings);

@@ -68,11 +68,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.price-add', {
+    url: '/price-add',
+    views: {
+      'tab-prices': {
+        templateUrl: 'templates/tab-price-add.html',
+        controller: 'PriceAddCtrl'
+      }
+    }
+  })
+
   .state('tab.prices', {
     url: '/prices',
     views: {
       'tab-prices': {
-        templateUrl: 'templates/tab-prices.html',
+        templateUrl: 'templates/prices.html',
         controller: 'PricesCtrl'
       }
     }

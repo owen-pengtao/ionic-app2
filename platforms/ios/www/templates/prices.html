@@ -1,0 +1,12 @@
+<ion-view view-title="Price History">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate sell-price-list" ng-repeat="price in prices track by $index" type="item-text-wrap">
+                <h2>{{price.name}}<s>{{price.tagPrice | currency}}</s>, {{price.purchasePrice | currency}}, {{price.purchasePrice * settings.rate | currency:"￥"}}</h2>
+                <ion-option-button class="button-assertive" ng-click="remove(price)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

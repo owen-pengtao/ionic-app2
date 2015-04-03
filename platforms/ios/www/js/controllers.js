@@ -26,7 +26,6 @@ angular.module('starter.controllers', ['starter.services'])
         for (var i = $scope.tagPrice.low; i <= $scope.tagPrice.high; i = i + step) {
           prices.push(i);
         }
-        console.log(prices[prices.length - 1], $scope.tagPrice.high);
         if (prices[prices.length - 1] < $scope.tagPrice.high) {
           prices.push($scope.tagPrice.high);
         }
@@ -58,7 +57,7 @@ angular.module('starter.controllers', ['starter.services'])
 
   })
 
-  .controller('PricesCtrl', function ($scope, Settings, $localstorage) {
+  .controller('PriceAddCtrl', function ($scope, Settings, $localstorage) {
     "use strict";
     $scope.settings  = Settings;
     $scope.goods = {
@@ -80,10 +79,8 @@ angular.module('starter.controllers', ['starter.services'])
       money : 0,
       off   : 0
     };
-    if (Object.keys($localstorage.getObject("priceHistory")).length) {
-      if ($localstorage.getObject("priceHistory").length > 0) {
-        $scope.goods = $localstorage.getObject("priceHistory").slice(-1)[0];
-      }
+    if (Object.keys($localstorage.getObject("currentPrice")).length) {
+      $scope.goods = $localstorage.getObject("currentPrice");
     }
 
     $scope.calculatePrice = function() {
@@ -98,20 +95,16 @@ angular.module('starter.controllers', ['starter.services'])
       $scope.goods.couponCount = $scope.coupon.store + $scope.coupon.off + $scope.coupon.money;
 
       $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.couponCount) * (1 + $scope.settings.tax/100), 2);
-      $scope.savePrice(false);
+      $localstorage.setObject("currentPrice", $scope.goods);
       return $scope.goods.purchasePrice;
     };
 
-    $scope.savePrice = function(isAdd) {
+    $scope.savePrice = function() {
       var priceHistory = Object.keys($localstorage.getObject("priceHistory")).length ? $localstorage.getObject("priceHistory") : [];
-      if (JSON.stringify(priceHistory.slice(-1)[0]) !== JSON.stringify($scope.goods)) {
-        if (isAdd) {
-          priceHistory.push($scope.goods);
-        }else{
-          priceHistory[priceHistory.length - 1] = $scope.goods;
-        }
+      if (priceHistory!==[] && JSON.stringify(priceHistory.slice(-1)[0]) !== JSON.stringify($scope.goods)) {
+        priceHistory.push($scope.goods);
+        $localstorage.setObject("priceHistory", priceHistory);
       }
-      $localstorage.setObject("priceHistory", priceHistory);
     };
     $scope.onTabSelected = function() {
       console.log("onTabSelected");
@@ -119,6 +112,15 @@ angular.module('starter.controllers', ['starter.services'])
     $scope.calculatePrice();
   })
 
+  .controller('PricesCtrl', function ($scope, Settings, $localstorage) {
+    "use strict";
+    $scope.settings  = Settings;
+    $scope.prices = $localstorage.getObject("priceHistory");
+    $scope.remove = function(price) {
+      $scope.prices.splice($scope.prices.indexOf(price), 1);
+      $localstorage.setObject("priceHistory", $scope.prices);
+    };
+  })
   .controller('SettingsCtrl', function ($scope, Settings, Duty, $localstorage) {
     $scope.settings = Settings;
     $scope.duty = Duty;

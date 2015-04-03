@@ -31,3 +31,6 @@ input.sell-input-underline{
     font-size: 12px;
     vertical-align: middle;
 }
+.sell-price-list h2 s{
+    margin-left: 40px;
+}
