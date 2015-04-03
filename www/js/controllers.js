@@ -36,7 +36,11 @@ angular.module('starter.controllers', ['starter.services'])
     };
     $scope.calculatePrice();
     $scope.onTapRow = function($event){
-      $event.currentTarget.className = $event.currentTarget.className ? "" : "selected";
+      if ($event.currentTarget.classList.contains("selected")) {
+        $event.currentTarget.classList.remove("selected");
+      }else{
+        $event.currentTarget.classList.add("selected");
+      }
     };
   })
 

@@ -3,9 +3,13 @@
         <div class="list">
             <form name="priceForm">
                 <div class="row item">
-                    <label class="item-input row">
+                    <label class="item-input row col-50">
                         <span class="input-label">标签价格</span>
-                        <input type="number" class="col-50 sell-input-underline" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                        <input type="number" class="sell-input-underline" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                    </label>
+                    <label class="item-input row col-50">
+                        <span class="input-label">商品名称</span>
+                        <input type="text" class="sell-input-underline" ng-model="goods.name" ng-change="calculatePrice()">
                     </label>
                 </div>
                 <div class="row item">
@@ -85,7 +89,7 @@
                     </label>
                 </div>
                 <label class="row item text-center">
-                    <button class="button button-block button-positive" ng-click="savePrice()">Save</button>
+                    <button class="button button-block button-positive" ng-click="savePrice(true)">Save</button>
                 </label>
             </form>
         </div>

@@ -11,16 +11,13 @@ input.sell-input-underline{
     text-align: center;
 }
 .sell-table thead th{
-    height: 37px;
-    line-height: 20px;
-    font-size: 16px;
-    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
     width: 20%;
     vertical-align: middle;
     font-weight: bold;
 }
 .sell-table tbody tr {
-    height: 47px;
+    height: 37px;
     line-height: 20px;
     border-bottom: 1px solid #CCCCCC;
 }
@@ -31,6 +28,6 @@ input.sell-input-underline{
     background-color: #D9EDF7;
 }
 .sell-table tbody td{
-    font-size: 14px;
+    font-size: 12px;
     vertical-align: middle;
 }

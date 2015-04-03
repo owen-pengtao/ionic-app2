@@ -36,7 +36,11 @@ angular.module('starter.controllers', ['starter.services'])
     };
     $scope.calculatePrice();
     $scope.onTapRow = function($event){
-      $event.currentTarget.className = $event.currentTarget.className ? "" : "selected";
+      if ($event.currentTarget.classList.contains("selected")) {
+        $event.currentTarget.classList.remove("selected");
+      }else{
+        $event.currentTarget.classList.add("selected");
+      }
     };
   })
 
@@ -58,6 +62,7 @@ angular.module('starter.controllers', ['starter.services'])
     "use strict";
     $scope.settings  = Settings;
     $scope.goods = {
+      name        : "",
       tagPrice    : 40,
       couponStore : 0,
       couponMoney : 0,
@@ -93,20 +98,25 @@ angular.module('starter.controllers', ['starter.services'])
       $scope.goods.couponCount = $scope.coupon.store + $scope.coupon.off + $scope.coupon.money;
 
       $scope.goods.purchasePrice = round2(($scope.goods.tagPrice - $scope.goods.couponCount) * (1 + $scope.settings.tax/100), 2);
+      $scope.savePrice(false);
       return $scope.goods.purchasePrice;
     };
 
-    $scope.calculatePrice();
-    $scope.savePrice = function() {
+    $scope.savePrice = function(isAdd) {
       var priceHistory = Object.keys($localstorage.getObject("priceHistory")).length ? $localstorage.getObject("priceHistory") : [];
-      if (priceHistory.length && JSON.stringify(priceHistory.slice(-1)[0]) !== JSON.stringify($scope.goods)) {
-        priceHistory.push($scope.goods);
-        $localstorage.setObject("priceHistory", priceHistory);
+      if (JSON.stringify(priceHistory.slice(-1)[0]) !== JSON.stringify($scope.goods)) {
+        if (isAdd) {
+          priceHistory.push($scope.goods);
+        }else{
+          priceHistory[priceHistory.length - 1] = $scope.goods;
+        }
       }
+      $localstorage.setObject("priceHistory", priceHistory);
     };
     $scope.onTabSelected = function() {
       console.log("onTabSelected");
     };
+    $scope.calculatePrice();
   })
 
   .controller('SettingsCtrl', function ($scope, Settings, Duty, $localstorage) {
