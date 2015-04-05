@@ -1,21 +1,23 @@
 /* Empty. Add your own CSS if you like */
 input.sell-input-underline{
-    border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #C0C0C0;
 }
 .color-red{
-    color: #d4081a;
+  color: #d4081a;
 }
 .sell-table{
-    width: 96%;
-    margin: 10px 2%;
-    text-align: center;
-}
-.sell-table thead th{
+  width: 96%;
+  margin: 10px 2%;
+  text-align: center;
+  thead th{
     font-size: 14px;
     width: 20%;
     font-weight: bold;
-}
-.sell-table thead th, .sell-table tbody td {
+  }
+  tbody td{
+    font-size: 12px;
+  }
+  thead th, tbody td {
     height: 37px;
     line-height: 20px;
     vertical-align: middle;
@@ -27,19 +29,19 @@ input.sell-input-underline{
     -ms-user-select: auto !important;
     -o-user-select: auto !important;
     user-select: auto !important;
-}
-.sell-table tbody tr:nth-child(even){
-    background-color: #F9F9F9;
-}
-.sell-table tbody tr.selected{
-    background-color: #D9EDF7;
-}
-.sell-table tbody td{
-    font-size: 12px;
+  }
+  tbody tr{
+    :nth-child(even){
+      background-color: #F9F9F9;
+    }
+    .selected{
+      background-color: #D9EDF7;
+    }
+  }
 }
 .sell-price-list div{
-    font-size: 14px;
-}
-.sell-price-list div s{
+  font-size: 14px;
+  s{
     margin-left: 30px;
+  }
 }

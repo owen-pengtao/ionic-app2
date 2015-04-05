@@ -13,13 +13,20 @@ input.sell-input-underline{
 .sell-table thead th{
     font-size: 14px;
     width: 20%;
-    vertical-align: middle;
     font-weight: bold;
 }
-.sell-table tbody tr {
+.sell-table thead th, .sell-table tbody td {
     height: 37px;
     line-height: 20px;
+    vertical-align: middle;
     border-bottom: 1px solid #CCCCCC;
+
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;
 }
 .sell-table tbody tr:nth-child(even){
     background-color: #F9F9F9;
@@ -29,8 +36,10 @@ input.sell-input-underline{
 }
 .sell-table tbody td{
     font-size: 12px;
-    vertical-align: middle;
 }
-.sell-price-list h2 s{
-    margin-left: 40px;
+.sell-price-list div{
+    font-size: 14px;
+}
+.sell-price-list div s{
+    margin-left: 30px;
 }

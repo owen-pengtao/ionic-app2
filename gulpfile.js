@@ -62,4 +62,4 @@ gulp.task('git-check', function(done) {
   done();
 });
 
-gulp.task('develop', ['watch', 'livereload']);
+gulp.task('develop', ['watch']);

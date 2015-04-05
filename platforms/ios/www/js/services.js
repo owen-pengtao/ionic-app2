@@ -9,26 +9,22 @@ angular.module('starter.services', [])
         .error(function (e, status) {
           deferred.reject(e, status);
         });
-      return deferred.promise;
+        return deferred.promise;
     };
     return obj;
 })
-.factory('Settings', function($localstorage, Rate) {
+.factory('Settings', function($localstorage) {
   "use strict";
   var settings = {
-      "rate" : 6.28,
-      "tax"  : 8.75,
-      "duty" : 0.1
-    };
+    "rate" : 6.28,
+    "tax"  : 8.75,
+    "duty" : 0.1
+  };
   if (Object.keys($localstorage.getObject("settings")).length) {
     settings = $localstorage.getObject("settings");
+  }else{
+    $localstorage.setObject("settings", settings);
   }
-  Rate.getRate().then(function(data){
-    console.log("data: " + data.rate);
-    settings.rate = data.rate;
-  });
-
-  $localstorage.setObject("settings", settings);
   return settings;
 })
 .factory('Duty', function() {

@@ -13,21 +13,18 @@ angular.module('starter.services', [])
     };
     return obj;
 })
-.factory('Settings', function($localstorage, Rate) {
+.factory('Settings', function($localstorage) {
   "use strict";
   var settings = {
-      "rate" : 6.28,
-      "tax"  : 8.75,
-      "duty" : 0.1
-    };
+    "rate" : 6.28,
+    "tax"  : 8.75,
+    "duty" : 0.1
+  };
   if (Object.keys($localstorage.getObject("settings")).length) {
     settings = $localstorage.getObject("settings");
+  }else{
+    $localstorage.setObject("settings", settings);
   }
-  Rate.getRate().then(function(data){
-    settings.rate = Number(data.rate);
-  });
-
-  $localstorage.setObject("settings", settings);
   return settings;
 })
 .factory('Duty', function() {

@@ -3,7 +3,7 @@ function round2(number, fractionDigits){
 }
 angular.module('starter.controllers', ['starter.services'])
 
-  .controller('HomeCtrl', function ($scope, $localstorage, Settings) {
+  .controller('HomeCtrl', function ($scope, $localstorage, Settings, $ionicPopover) {
     "use strict";
     $scope.settings  = Settings;
 
@@ -41,6 +41,15 @@ angular.module('starter.controllers', ['starter.services'])
         $event.currentTarget.classList.add("selected");
       }
     };
+    //var template = '<ion-popover-view><ion-content> Hello! </ion-content></ion-popover-view>';
+    //
+    //$scope.popover = $ionicPopover.fromTemplate(template, {
+    //  scope: $scope
+    //});
+    //
+    //$scope.openPopover = function($event){
+    //  $scope.popover.show($event);
+    //};
   })
 
   .controller('CardsCtrl', function ($scope, $state) {
@@ -117,10 +126,16 @@ angular.module('starter.controllers', ['starter.services'])
       $localstorage.setObject("priceHistory", $scope.prices);
     };
   })
-  .controller('SettingsCtrl', function ($scope, Settings, Duty, $localstorage) {
+  .controller('SettingsCtrl', function ($scope, $localstorage, Settings, Duty, Rate) {
     $scope.settings = Settings;
     $scope.duty = Duty;
     $scope.saveSetting = function(){
       $localstorage.setObject("settings", $scope.settings);
+    };
+    $scope.getCurrentRate = function(){
+      Rate.getRate().then(function(data){
+        $scope.settings.rate = Number(data.rate);
+        $scope.saveSetting();
+      });
     };
   });
