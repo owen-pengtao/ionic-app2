@@ -297,3 +297,97 @@
 2015-04-04 15:45:37.617 sell[26265:2527338] [CDVTimer][TotalPluginStartup] 0.167012ms
 2015-04-04 15:45:37.656 sell[26265:2527338] Resetting plugins due to page load.
 2015-04-04 15:45:37.773 sell[26265:2527338] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/D90C4FCE-C414-4179-BF40-EA3F47E02E7E/sell.app/www/index.html#/tab/home
+2015-04-04 22:53:19.039 sell[26265:2759820] Terminating since there is no system app.
+2015-04-05 01:13:40.686 sell[33168:2859896] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/E6822AA4-04D6-424A-BFF9-53A35F3D4D22/Library/Cookies/Cookies.binarycookies
+2015-04-05 01:13:40.915 sell[33168:2859896] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 01:13:40.916 sell[33168:2859896] Multi-tasking -> Device: YES, App: YES
+2015-04-05 01:13:40.935 sell[33168:2859896] Unlimited access to network resources
+2015-04-05 01:13:41.322 sell[33168:2859896] [CDVTimer][keyboard] 0.123978ms
+2015-04-05 01:13:41.322 sell[33168:2859896] [CDVTimer][TotalPluginStartup] 0.389040ms
+2015-04-05 01:13:41.534 sell[33168:2859896] Resetting plugins due to page load.
+2015-04-05 01:13:41.773 sell[33168:2859896] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/2B90C042-42EE-44EA-9BAB-1D5810AD6B59/sell.app/www/index.html#/tab/home
+2015-04-05 01:28:19.317 sell[34864:2871144] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/89B79165-665E-40FE-B3E3-1F186E2CDF81/Library/Cookies/Cookies.binarycookies
+2015-04-05 01:28:19.381 sell[34864:2871144] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 01:28:19.381 sell[34864:2871144] Multi-tasking -> Device: YES, App: YES
+2015-04-05 01:28:19.382 sell[34864:2871144] Unlimited access to network resources
+2015-04-05 01:28:19.436 sell[34864:2871144] [CDVTimer][keyboard] 0.048995ms
+2015-04-05 01:28:19.436 sell[34864:2871144] [CDVTimer][TotalPluginStartup] 0.187039ms
+2015-04-05 01:28:19.476 sell[34864:2871144] Resetting plugins due to page load.
+2015-04-05 01:28:19.597 sell[34864:2871144] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/E0A44835-A402-44C9-944D-EDF44EE02D80/sell.app/www/index.html#/tab/home
+2015-04-05 11:22:33.578 sell[34864:2957857] Terminating since there is no system app.
+2015-04-05 11:22:33.578 sell[34864:2957684] Communications error: <OS_xpc_error: <error: 0x2da15f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2da183c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-04-05 13:45:22.771 sell[39173:2980900] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/5F79731C-22C5-458F-B1D5-4CA407260130/Library/Cookies/Cookies.binarycookies
+2015-04-05 13:45:22.988 sell[39173:2980900] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 13:45:22.989 sell[39173:2980900] Multi-tasking -> Device: YES, App: YES
+2015-04-05 13:45:22.992 sell[39173:2980900] Unlimited access to network resources
+2015-04-05 13:45:23.132 sell[39173:2980900] [CDVTimer][keyboard] 0.054002ms
+2015-04-05 13:45:23.132 sell[39173:2980900] [CDVTimer][TotalPluginStartup] 0.212967ms
+2015-04-05 13:45:23.278 sell[39173:2980900] Resetting plugins due to page load.
+2015-04-05 13:45:23.439 sell[39173:2980900] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/DA089BB9-5D68-420C-9698-D4A2979A92F7/sell.app/www/index.html#/tab/home
+2015-04-05 13:46:16.858 sell[40721:2983702] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/8284CB1F-145C-4DD0-A717-8D2FED8C2786/Library/Cookies/Cookies.binarycookies
+2015-04-05 13:46:16.951 sell[40721:2983702] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 13:46:16.952 sell[40721:2983702] Multi-tasking -> Device: YES, App: YES
+2015-04-05 13:46:16.953 sell[40721:2983702] Unlimited access to network resources
+2015-04-05 13:46:17.007 sell[40721:2983702] [CDVTimer][keyboard] 0.048995ms
+2015-04-05 13:46:17.007 sell[40721:2983702] [CDVTimer][TotalPluginStartup] 0.176013ms
+2015-04-05 13:46:17.045 sell[40721:2983702] Resetting plugins due to page load.
+2015-04-05 13:46:17.162 sell[40721:2983702] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/940E884E-4E9A-498A-8AC0-5F43677EE135/sell.app/www/index.html#/tab/home
+2015-04-05 13:52:32.451 sell[42331:2991249] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/70BA697B-4FF7-463C-95A4-E63AD6589FDE/Library/Cookies/Cookies.binarycookies
+2015-04-05 13:52:32.543 sell[42331:2991249] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 13:52:32.543 sell[42331:2991249] Multi-tasking -> Device: YES, App: YES
+2015-04-05 13:52:32.544 sell[42331:2991249] Unlimited access to network resources
+2015-04-05 13:52:32.600 sell[42331:2991249] [CDVTimer][keyboard] 0.048041ms
+2015-04-05 13:52:32.600 sell[42331:2991249] [CDVTimer][TotalPluginStartup] 0.176013ms
+2015-04-05 13:52:32.637 sell[42331:2991249] Resetting plugins due to page load.
+2015-04-05 13:52:32.759 sell[42331:2991249] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/DCE0B9CB-ECF8-4F34-9852-CA4D2D87BEDE/sell.app/www/index.html#/tab/home
+2015-04-05 13:58:01.789 sell[43919:2998641] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/7C1606A3-6157-434C-93B2-1F4B66042A6B/Library/Cookies/Cookies.binarycookies
+2015-04-05 13:58:01.938 sell[43919:2998641] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 13:58:01.938 sell[43919:2998641] Multi-tasking -> Device: YES, App: YES
+2015-04-05 13:58:01.939 sell[43919:2998641] Unlimited access to network resources
+2015-04-05 13:58:01.999 sell[43919:2998641] [CDVTimer][keyboard] 0.051975ms
+2015-04-05 13:58:01.999 sell[43919:2998641] [CDVTimer][TotalPluginStartup] 0.178993ms
+2015-04-05 13:58:02.061 sell[43919:2998641] Resetting plugins due to page load.
+2015-04-05 13:58:02.178 sell[43919:2998641] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/A437A3EB-AF43-4032-9AC9-85FC708AE333/sell.app/www/index.html#/tab/home
+2015-04-05 14:08:51.229 sell[48780:3012493] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/FE915FA8-9D87-48DC-B65B-D86725262C2C/Library/Cookies/Cookies.binarycookies
+2015-04-05 14:08:51.344 sell[48780:3012493] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 14:08:51.344 sell[48780:3012493] Multi-tasking -> Device: YES, App: YES
+2015-04-05 14:08:51.345 sell[48780:3012493] Unlimited access to network resources
+2015-04-05 14:08:51.400 sell[48780:3012493] [CDVTimer][keyboard] 0.050008ms
+2015-04-05 14:08:51.400 sell[48780:3012493] [CDVTimer][TotalPluginStartup] 0.184000ms
+2015-04-05 14:08:51.452 sell[48780:3012493] Resetting plugins due to page load.
+2015-04-05 14:08:51.570 sell[48780:3012493] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/3C0595DA-278D-4CFA-BE99-5F452CD03EFC/sell.app/www/index.html#/tab/home
+2015-04-05 14:13:24.766 sell[50344:3016500] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/F3E4B8DD-ED34-4005-BAE9-9F49EB550DB0/Library/Cookies/Cookies.binarycookies
+2015-04-05 14:13:24.867 sell[50344:3016500] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 14:13:24.868 sell[50344:3016500] Multi-tasking -> Device: YES, App: YES
+2015-04-05 14:13:24.869 sell[50344:3016500] Unlimited access to network resources
+2015-04-05 14:13:24.922 sell[50344:3016500] [CDVTimer][keyboard] 0.047982ms
+2015-04-05 14:13:24.923 sell[50344:3016500] [CDVTimer][TotalPluginStartup] 0.186980ms
+2015-04-05 14:13:24.964 sell[50344:3016500] Resetting plugins due to page load.
+2015-04-05 14:13:25.079 sell[50344:3016500] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/AC3C2B31-4D1E-4178-89DE-9D6C26CA3A51/sell.app/www/index.html#/tab/home
+2015-04-05 14:16:09.300 sell[53454:3022204] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/EB795E96-0B4D-4329-82F3-9307DFFC2496/Library/Cookies/Cookies.binarycookies
+2015-04-05 14:16:09.393 sell[53454:3022204] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 14:16:09.393 sell[53454:3022204] Multi-tasking -> Device: YES, App: YES
+2015-04-05 14:16:09.394 sell[53454:3022204] Unlimited access to network resources
+2015-04-05 14:16:09.448 sell[53454:3022204] [CDVTimer][keyboard] 0.047982ms
+2015-04-05 14:16:09.448 sell[53454:3022204] [CDVTimer][TotalPluginStartup] 0.169992ms
+2015-04-05 14:16:09.486 sell[53454:3022204] Resetting plugins due to page load.
+2015-04-05 14:16:09.604 sell[53454:3022204] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/78E2AA07-44FE-469E-A6E5-8740FF8E0E40/sell.app/www/index.html#/tab/home
+2015-04-05 14:18:41.336 sell[55017:3025464] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/DCB6A855-7FF4-4939-BFF3-4EAECA6185F3/Library/Cookies/Cookies.binarycookies
+2015-04-05 14:18:41.445 sell[55017:3025464] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 14:18:41.445 sell[55017:3025464] Multi-tasking -> Device: YES, App: YES
+2015-04-05 14:18:41.446 sell[55017:3025464] Unlimited access to network resources
+2015-04-05 14:18:41.501 sell[55017:3025464] [CDVTimer][keyboard] 0.047982ms
+2015-04-05 14:18:41.501 sell[55017:3025464] [CDVTimer][TotalPluginStartup] 0.173032ms
+2015-04-05 14:18:41.553 sell[55017:3025464] Resetting plugins due to page load.
+2015-04-05 14:18:41.676 sell[55017:3025464] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/DE1DE0F5-BE38-4F2E-ABF8-AE6339B43FCB/sell.app/www/index.html#/tab/home
+2015-04-05 14:19:20.426 sell[56592:3028219] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Data/Application/ABAD8365-3FC8-4C74-B0A6-0DD5AC990880/Library/Cookies/Cookies.binarycookies
+2015-04-05 14:19:20.473 sell[56592:3028219] Apache Cordova native platform version 3.7.0 is starting.
+2015-04-05 14:19:20.473 sell[56592:3028219] Multi-tasking -> Device: YES, App: YES
+2015-04-05 14:19:20.475 sell[56592:3028219] Unlimited access to network resources
+2015-04-05 14:19:20.530 sell[56592:3028219] [CDVTimer][keyboard] 0.050962ms
+2015-04-05 14:19:20.530 sell[56592:3028219] [CDVTimer][TotalPluginStartup] 0.202000ms
+2015-04-05 14:19:20.572 sell[56592:3028219] Resetting plugins due to page load.
+2015-04-05 14:19:20.694 sell[56592:3028219] Finished load of: file:///Users/tpeng/Library/Developer/CoreSimulator/Devices/585B112D-03DB-4853-BDFD-572045CB1740/data/Containers/Bundle/Application/F0758791-DCA7-45CF-8C19-EAD904FF3D6A/sell.app/www/index.html#/tab/home
+2015-04-05 15:38:30.829 sell[56592:3047191] Terminating since there is no system app.

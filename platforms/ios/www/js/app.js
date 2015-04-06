@@ -48,26 +48,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.cards', {
-    url: '/cards',
-    views: {
-      'tab-cards': {
-        templateUrl: 'templates/tab-cards.html',
-        controller: 'CardsCtrl'
-      }
-    }
-  })
-
-  .state('tab.card-detail', {
-    url: '/cards/:cardId',
-    views: {
-      'tab-cards': {
-        templateUrl: 'templates/card-detail.html',
-        controller: 'CardDetailCtrl'
-      }
-    }
-  })
-
   .state('tab.price-add', {
     url: '/price-add',
     views: {
@@ -84,6 +64,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-prices': {
         templateUrl: 'templates/prices.html',
         controller: 'PricesCtrl'
+      }
+    }
+  })
+
+  .state('tab.tip', {
+    url: '/tip',
+    views: {
+      'tab-tip': {
+        templateUrl: 'templates/tab-tip.html',
+        controller: 'TipCtrl'
       }
     }
   })

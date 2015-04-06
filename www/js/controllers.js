@@ -52,16 +52,6 @@ angular.module('starter.controllers', ['starter.services'])
     //};
   })
 
-  .controller('CardsCtrl', function ($scope, $state) {
-    $scope.onTabSelected = function(){
-      $state.go("tab.cards");
-    };
-  })
-
-  .controller('CardDetailCtrl', function ($scope, $stateParams, User, Cards, $state, $ionicNavBarDelegate) {
-
-  })
-
   .controller('PriceAddCtrl', function ($scope, Settings, $localstorage) {
     "use strict";
     $scope.settings  = Settings;
@@ -125,6 +115,30 @@ angular.module('starter.controllers', ['starter.services'])
       $scope.prices.splice($scope.prices.indexOf(price), 1);
       $localstorage.setObject("priceHistory", $scope.prices);
     };
+  })
+  .controller('TipCtrl', function ($scope) {
+    $scope.tip = {
+      before : 10,
+      percent: 0.1,
+      tip    : 0,
+      after  : 0,
+      person : 1,
+      average: 0
+    };
+    $scope.getAverage = function(person){
+      $scope.tip.person  = person;
+      $scope.tip.average = $scope.tip.after/$scope.tip.person;
+    };
+    $scope.calculateTip = function(){
+      $scope.tip.tip   = $scope.tip.before * $scope.tip.percent;
+      $scope.tip.after = $scope.tip.before + $scope.tip.tip;
+      $scope.getAverage($scope.tip.person);
+    };
+    $scope.setTip = function(percent){
+      $scope.tip.percent = percent;
+      $scope.calculateTip();
+    };
+    $scope.calculateTip();
   })
   .controller('SettingsCtrl', function ($scope, $localstorage, Settings, Duty, Rate) {
     $scope.settings = Settings;

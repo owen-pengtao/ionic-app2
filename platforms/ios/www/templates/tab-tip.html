@@ -1,0 +1,39 @@
+<ion-view view-title="Tip">
+  <ion-content>
+      <ion-list class="tip">
+          <div class="item row">
+              <div class="item-input row">
+                  <span class="col-25">Before Tip：</span>
+                  <input type="number" ng-model="tip.before" ng-change="calculateTip()">
+              </div>
+          </div>
+          <div class="item row">
+              <div class="item-input row">
+                  <span class="col-25">Tip：</span>
+                  <input class="col-25" type="text" value="{{tip.tip | currency}}" readonly>
+                  <button class="button button-small" ng-class="{'selected': tip.percent==n}" ng-repeat="n in [0.1, 0.15, 0.18, 0.2]" ng-click="setTip(n)">{{n*100}}%</button>
+              </div>
+          </div>
+          <div class="item row">
+              <div class="item-input row">
+                  <span class="col-25">After Tip：</span>
+                  <input type="text" value="{{tip.after | currency}}" readonly>
+              </div>
+          </div>
+          <div class="item row">
+              <div class="item-input row">
+                  <span class="col-25">People：</span>
+                  <ion-scroll zooming="true" direction="x">
+                    <button class="button button-small" ng-class="{'selected': tip.person==n}" ng-repeat="n in [1,2,3,4,5,6,7,8,9]" ng-click="getAverage(n)">{{n}}</button>
+                  </ion-scroll>
+              </div>
+          </div>
+          <div class="item row">
+              <div class="item-input row">
+                  <span class="col-25">Average：</span>
+                  <input type="text" value="{{tip.average | currency}}" readonly>
+              </div>
+          </div>
+      </ion-list>
+  </ion-content>
+</ion-view>

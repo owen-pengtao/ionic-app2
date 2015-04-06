@@ -4,20 +4,20 @@
         <div class="item row">
             <div class="item-input row">
                 <span class="col-25">美元汇率：</span>
-                <input class="col-50" type="number" ng-model="settings.rate" ng-change="saveSetting()">
-                <button class="button button-small col-25" ng-click="getCurrentRate()">获取当天汇率</button>
+                <input class="col-33" type="number" ng-model="settings.rate" ng-change="saveSetting()">
+                <button class="button button-small" ng-click="getCurrentRate()">获取当天汇率</button>
             </div>
         </div>
         <div class="item row">
             <label class="item-input row">
                 <span class="col-25">消费税%：</span>
-                <input class="col-50" type="number" string-to-number ng-model="settings.tax" ng-change="saveSetting()">
+                <input class="col-33" type="number" string-to-number ng-model="settings.tax" ng-change="saveSetting()">
             </label>
         </div>
         <div class="item row">
             <label class="item-input row">
                 <span class="col-25">中国关税：</span>
-                <input class="col-50" type="range" ng-model="settings.duty" min="0" max="0.5" value="0" step="0.1" ng-change="saveSetting()">
+                <input class="col-33" type="range" ng-model="settings.duty" min="0" max="0.5" value="0" step="0.1" ng-change="saveSetting()">
                 <span class="col-25">{{settings.duty*100}}%</span>
             </label>
         </div>
@@ -25,7 +25,7 @@
             <label class="item-input row">
                 <span class="col-25"></span>
                 <ul>
-                    <li ng-repeat="d in duty track by $index" ng-class="{'color-red': d.tax==settings.duty}">{{d.tax*100 + "%" + d.category}}</li>
+                    <li ng-repeat="d in duty track by $index" ng-class="{'assertive': d.tax==settings.duty}">{{d.tax*100 + "%" + d.category}}</li>
                 </ul>
             </label>
         </div>
