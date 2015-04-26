@@ -1,8 +1,17 @@
-<ion-view view-title="Price History">
+<ion-view view-title="Price History" class="price-history">
     <ion-content>
         <ion-list>
+          <ion-item class="sell-price-list" type="item-text-wrap">
+            <div class="product">
+              <span class="name">商品名称</span>
+              <s>标签价</s>, 购买价, 国内价
+            </div>
+          </ion-item>
             <ion-item class="item-remove-animate sell-price-list" ng-repeat="price in prices track by $index" type="item-text-wrap">
-                <div>{{price.name}}<s>{{price.tagPrice | currency}}</s>, {{price.purchasePrice | currency}}, {{price.purchasePrice * settings.rate | currency:"￥"}}</div>
+                <div class="product">
+                  <span class="name">{{price.name}}</span>
+                  <s>{{price.tagPrice | currency}}</s>, {{price.purchasePrice | currency}}, {{price.purchasePrice * settings.rate | currency:"￥"}}
+                </div>
                 <ion-option-button class="button-assertive" ng-click="remove(price)">
                     Delete
                 </ion-option-button>

@@ -43,12 +43,6 @@ input.sell-input-underline{
     }
   }
 }
-.sell-price-list div{
-  font-size: $font-size-base;
-  s{
-    margin-left: 30px;
-  }
-}
 .item .item-input{
   > span{
     font-size: $font-size-base;
@@ -70,5 +64,26 @@ input.sell-input-underline{
   .scroll-view{
     width: 100%;
     margin: 2px 0 1px;
+  }
+}
+.tab-home-view{
+  .row.item .item-input{
+    padding-left: 5px;
+    span.input-label{
+      width: 75px;
+    }
+  }
+}
+.price-history{
+  .sell-price-list div.product{
+    font-size: $font-size-base;
+    .name{
+      display: inline-block;
+      width: 100px;
+      max-width: 100px;
+    }
+    s{
+      margin-left: 30px;
+    }
   }
 }

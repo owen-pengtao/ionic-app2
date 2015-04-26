@@ -1,31 +1,31 @@
-<ion-view view-title="Prices Lists">
+<ion-view view-title="Prices Lists" class="tab-home-view">
     <ion-content>
         <div class="row item">
             <label class="item-input col-33">
                 <span class="input-label">Low $</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.low" ng-blur="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.low" ng-blur="calculatePrice()">
             </label>
             <label class="item-input col-33">
                 <span class="input-label">High $</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.high" ng-blur="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.high" ng-blur="calculatePrice()">
             </label>
             <label class="item-input col-33">
                 <span class="input-label">Step $</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.step" ng-blur="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.step" ng-blur="calculatePrice()">
             </label>
         </div>
         <div class="row item">
             <label class="item-input col-33">
                 <span class="input-label">Store%</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.offStore" ng-change="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offStore" ng-change="calculatePrice()">
             </label>
             <label class="item-input col-33">
                 <span class="input-label">Coupon%</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.offCoupon" ng-change="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offCoupon" ng-change="calculatePrice()">
             </label>
             <label class="item-input col-33">
                 <span class="input-label">Money$</span>
-                <input class="sell-input-underline" type="number" ng-model="tagPrice.offMoney" ng-change="calculatePrice()">
+                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offMoney" ng-change="calculatePrice()">
             </label>
         </div>
         <table class="sell-table">

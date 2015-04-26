@@ -63,3 +63,7 @@ gulp.task('git-check', function(done) {
 });
 
 gulp.task('develop', ['watch']);
+/**
+ * #ionic serve
+ * #gulp develop
+ */

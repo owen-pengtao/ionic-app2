@@ -7041,11 +7041,6 @@ input.sell-input-underline {
   .sell-table tbody tr.selected {
     background-color: #D9EDF7; }
 
-.sell-price-list div {
-  font-size: 14px; }
-  .sell-price-list div s {
-    margin-left: 30px; }
-
 .item .item-input > span {
   font-size: 14px; }
 .item .item-input .button {
@@ -7062,3 +7057,17 @@ input.sell-input-underline {
 .item .item-input .scroll-view {
   width: 100%;
   margin: 2px 0 1px; }
+
+.tab-home-view .row.item .item-input {
+  padding-left: 5px; }
+  .tab-home-view .row.item .item-input span.input-label {
+    width: 75px; }
+
+.price-history .sell-price-list div.product {
+  font-size: 14px; }
+  .price-history .sell-price-list div.product .name {
+    display: inline-block;
+    width: 100px;
+    max-width: 100px; }
+  .price-history .sell-price-list div.product s {
+    margin-left: 30px; }

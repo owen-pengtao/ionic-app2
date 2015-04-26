@@ -26,6 +26,13 @@
                     </label>
                 </div>
                 <div class="row item">
+                  <label class="item-input row">
+                    <span class="input-label">店内折扣券</span>
+                    <input type="tel" class="sell-input-underline" ng-model="goods.couponStore" ng-change="calculatePrice()">
+                    <span class="col">{{goods.couponStore}}%, {{coupon.store | currency:" - $"}}</span>
+                  </label>
+                </div>
+                <div class="row item">
                     <label class="item-input row">
                         <span class="input-label">店内折扣券</span>
                         <input class="col-33" type="range" ng-model="goods.couponStore" min="0" max="95" step="5" ng-change="calculatePrice()">
