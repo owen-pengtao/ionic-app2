@@ -1,32 +1,38 @@
 <ion-view view-title="Prices Lists" class="tab-home-view">
     <ion-content>
-        <div class="row item">
-            <label class="item-input col-33">
-                <span class="input-label">Low $</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.low" ng-blur="calculatePrice()">
-            </label>
-            <label class="item-input col-33">
-                <span class="input-label">High $</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.high" ng-blur="calculatePrice()">
-            </label>
-            <label class="item-input col-33">
-                <span class="input-label">Step $</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.step" ng-blur="calculatePrice()">
-            </label>
+        <div class="row">
+            <div class="col-33 input-group">
+                <span>Low</span>
+                <input type="tel" ng-model="tagPrice.low" ng-blur="calculatePrice()">
+                <span>$</span>
+            </div>
+            <div class="col-34 input-group">
+                <span>High</span>
+                <input type="tel" ng-model="tagPrice.high" ng-blur="calculatePrice()">
+                <span>$</span>
+            </div>
+            <div class="col-33 input-group">
+                <span>Step</span>
+                <input type="tel" ng-model="tagPrice.step" ng-blur="calculatePrice()">
+                <span>$</span>
+            </div>
         </div>
-        <div class="row item">
-            <label class="item-input col-33">
-                <span class="input-label">Store%</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offStore" ng-change="calculatePrice()">
-            </label>
-            <label class="item-input col-33">
-                <span class="input-label">Coupon%</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offCoupon" ng-change="calculatePrice()">
-            </label>
-            <label class="item-input col-33">
-                <span class="input-label">Money$</span>
-                <input class="sell-input-underline" type="tel" ng-model="tagPrice.offMoney" ng-change="calculatePrice()">
-            </label>
+        <div class="row">
+            <div class="col-33 input-group">
+                <span>Store</span>
+                <input type="tel" ng-model="tagPrice.offStore" ng-blur="calculatePrice()">
+                <span>%</span>
+            </div>
+            <div class="col-34 input-group">
+                <span>Coupon</span>
+                <input type="tel" ng-model="tagPrice.offCoupon" ng-blur="calculatePrice()">
+                <span>%</span>
+            </div>
+            <div class="col-33 input-group">
+                <span>Cash</span>
+                <input type="tel" ng-model="tagPrice.offMoney" ng-blur="calculatePrice()">
+                <span>$</span>
+            </div>
         </div>
         <table class="sell-table">
             <thead>
