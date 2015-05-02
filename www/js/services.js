@@ -18,7 +18,8 @@ angular.module('starter.services', [])
   var settings = {
     "rate" : 6.28,
     "tax"  : 8.75,
-    "duty" : 0.1
+    "duty" : 0.1,
+    "toggleCost" : false
   };
   if (Object.keys($localstorage.getObject("settings")).length) {
     settings = $localstorage.getObject("settings");

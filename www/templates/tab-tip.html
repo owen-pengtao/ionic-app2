@@ -11,7 +11,7 @@
               <div class="item-input row">
                   <span class="col-25">Tip：</span>
                   <input class="col-25" type="text" value="{{tip.tip | currency}}" readonly>
-                  <button class="button button-small" ng-class="{'selected': tip.percent==n}" ng-repeat="n in [0.1, 0.15, 0.18, 0.2]" ng-click="setTip(n)">{{n*100}}%</button>
+                  <button style="min-width: 33px;text-align:center;padding:0;margin:0 7px 0 0;" class="button button-small" ng-class="{'selected': tip.percent==n}" ng-repeat="n in [0.1, 0.15, 0.18, 0.2]" ng-click="setTip(n)">{{n*100}}%</button>
               </div>
           </div>
           <div class="item row">

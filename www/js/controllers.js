@@ -55,7 +55,6 @@ angular.module('starter.controllers', ['starter.services'])
     .controller('PriceAddCtrl', function ($scope, Settings, $localstorage) {
         "use strict";
         $scope.settings = Settings;
-        $scope.toggleCost = false;
         $scope.goodsDefaultName = "Test goods";
         $scope.goods = {
             name: $scope.goodsDefaultName,
