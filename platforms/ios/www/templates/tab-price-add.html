@@ -7,7 +7,7 @@
             <div class="list">
                 <div class="item input-row">
                     <span>商品名称</span>
-                    <input type="text" ng-model="goods.name" ng-change="calculatePrice()">
+                    <input type="text" ng-model="goods.name" placeholder="{{goodsDefaultName}}" required="" ng-change="calculatePrice()">
                 </div>
                 <div class="row item">
                     <div class="input-group" style="width: 42%;padding-left: 5px;">
@@ -28,17 +28,17 @@
                 </div>
                 <div class="item input-row input-row-value">
                     <span>店内折扣券</span>
-                    <input type="number" ng-model="goods.couponStore" ng-change="calculatePrice()">
+                    <input type="tel" ng-model="goods.couponStore" ng-change="calculatePrice()">
                     <span>{{goods.couponStore}}%, {{coupon.store | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-value">
                     <span>折扣优惠券</span>
-                    <input type="number" ng-model="goods.couponOff" ng-change="calculatePrice()">
+                    <input type="tel" ng-model="goods.couponOff" ng-change="calculatePrice()">
                     <span>{{goods.couponOff}}%, {{coupon.off | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-value">
                     <span>现金优惠券</span>
-                    <input type="number" ng-model="goods.couponMoney" ng-change="calculatePrice()">
+                    <input type="tel" ng-model="goods.couponMoney" ng-change="calculatePrice()">
                     <span>{{coupon.money | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-span">
@@ -48,17 +48,17 @@
                 <div class="item input-row input-row-span">
                     <span>采购成本价</span>
                     <span>{{goods.purchasePrice | currency}}，{{goods.purchasePrice * settings.rate | currency:"￥"}}</span>
-                    <button id="otherCost" ng-click="toggleCost = !toggleCost">Other cost</button>
+                    <button class="button button-small" ng-click="settings.toggleCost = !settings.toggleCost">Other cost</button>
                 </div>
 
-                <div class="row item" ng-show="toggleCost">
+                <div class="row item" ng-show="settings.toggleCost">
                     <label class="item-input row">
                         <span class="input-label">美国快递 $：</span>
                         <input class="col-33" type="range" ng-model="goods.expressUS" min="0" max="50" step="1" ng-change="calculatePrice()">
                         <span class="col">{{goods.expressUS | currency}}, {{goods.expressUS * settings.rate | currency:"￥"}}</span>
                     </label>
                 </div>
-                <div class="row item" ng-show="toggleCost">
+                <div class="row item" ng-show="settings.toggleCost">
                     <label class="item-input row">
                         <span class="input-label">中国快递￥：</span>
                         <input class="col-33" type="range" ng-model="goods.expressCN" min="0" max="50" step="1" ng-change="calculatePrice()">
@@ -79,7 +79,7 @@
                         <span class="col">{{goods.expressOther | currency:"￥"}}</span>
                     </label>
                 </div>
-                <div class="row item" ng-show="toggleCost">
+                <div class="row item" ng-show="settings.toggleCost">
                     <label class="item-input row">
                         <span class="input-label">国内成本价：
                             {{(goods.purchasePrice + goods.expressUS*1)*settings.rate + goods.expressCN*1+ goods.purchasePrice * goods.expressDuty * settings.rate  + goods.expressOther*1 | currency:"￥"}}

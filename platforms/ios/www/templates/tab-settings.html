@@ -1,27 +1,25 @@
 <ion-view view-title="Settings">
   <ion-content>
     <ion-list>
-        <div class="item row">
-            <div class="item-input row">
-                <span class="col-25">美元汇率：</span>
-                <input class="col-33" type="number" ng-model="settings.rate" ng-change="saveSetting()">
-                <button class="button button-small" ng-click="getCurrentRate()">获取当天汇率</button>
-            </div>
+        <div class="item input-row input-row-value">
+            <span>美元汇率：</span>
+            <input type="number" ng-model="settings.rate" ng-change="saveSetting()">
+            <button class="button button-small" ng-click="getCurrentRate()">Get today's rate</button>
         </div>
-        <div class="item row">
-            <label class="item-input row">
-                <span class="col-25">消费税%：</span>
-                <input class="col-33" type="number" string-to-number ng-model="settings.tax" ng-change="saveSetting()">
-            </label>
+        <div class="item input-row input-row-value">
+            <span>消费税%：</span>
+            <input type="number" ng-model="settings.tax" ng-change="saveSetting()">
+            <button class="button button-small" ng-click="settings.toggleCost = !settings.toggleCost">Other cost</button>
         </div>
-        <div class="item row">
+
+        <div class="item row" ng-show="settings.toggleCost">
             <label class="item-input row">
                 <span class="col-25">中国关税：</span>
                 <input class="col-33" type="range" ng-model="settings.duty" min="0" max="0.5" value="0" step="0.1" ng-change="saveSetting()">
                 <span class="col-25">{{settings.duty*100}}%</span>
             </label>
         </div>
-        <div class="item row">
+        <div class="item row" ng-show="settings.toggleCost">
             <label class="item-input row">
                 <span class="col-25"></span>
                 <ul>
