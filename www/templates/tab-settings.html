@@ -3,12 +3,12 @@
     <ion-list>
         <div class="item input-row input-row-value">
             <span>美元汇率：</span>
-            <input type="number" ng-model="settings.rate" ng-change="saveSetting()">
+            <input type="number" ng-model="settings.rate" ng-change="saveSetting()" number select-on-click>
             <button class="button button-small" ng-click="getCurrentRate()">Get today's rate</button>
         </div>
         <div class="item input-row input-row-value">
             <span>消费税%：</span>
-            <input type="number" ng-model="settings.tax" ng-change="saveSetting()">
+            <input type="number" ng-model="settings.tax" ng-change="saveSetting()" number select-on-click>
             <button class="button button-small" ng-click="settings.toggleCost = !settings.toggleCost">Other cost</button>
         </div>
 

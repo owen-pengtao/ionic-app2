@@ -12,42 +12,42 @@
                 <div class="row item">
                     <div class="input-group" style="width: 42%;padding-left: 5px;">
                         <span>Tag Price</span>
-                        <input type="number" style="padding-right: 30px;" ng-model="goods.tagPrice" ng-change="calculatePrice()">
+                        <input type="number" style="padding-right: 30px;" ng-model="goods.tagPrice" ng-change="calculatePrice()" number select-on-click>
                         <span>$</span>
                     </div>
                     <div class="input-group" style="width: 25%">
                         <span>Tax</span>
-                        <input type="number" ng-model="settings.tax" ng-change="calculatePrice()">
+                        <input type="number" ng-model="settings.tax" ng-change="calculatePrice()" number select-on-click>
                         <span>%</span>
                     </div>
                     <div class="input-group" style="width: 33%">
                         <span>Rate</span>
-                        <input type="number" ng-model="settings.rate" ng-change="calculatePrice()">
+                        <input type="number" ng-model="settings.rate" ng-change="calculatePrice()" number select-on-click>
                         <span>$</span>
                     </div>
                 </div>
                 <div class="item input-row input-row-value">
                     <span>店内折扣券</span>
-                    <input type="tel" ng-model="goods.couponStore" ng-change="calculatePrice()">
-                    <span>{{goods.couponStore}}%, {{coupon.store | currency:" - $"}}</span>
+                    <input type="tel" ng-model="goods.couponStore" ng-change="calculatePrice()" integer select-on-click>
+                    <span>{{goods.couponStore || 0}}%, {{coupon.store || 0 | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-value">
                     <span>折扣优惠券</span>
-                    <input type="tel" ng-model="goods.couponOff" ng-change="calculatePrice()">
-                    <span>{{goods.couponOff}}%, {{coupon.off | currency:" - $"}}</span>
+                    <input type="tel" ng-model="goods.couponOff" ng-change="calculatePrice()" integer select-on-click>
+                    <span>{{goods.couponOff || 0}}%, {{coupon.off || 0 | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-value">
                     <span>现金优惠券</span>
-                    <input type="tel" ng-model="goods.couponMoney" ng-change="calculatePrice()">
-                    <span>{{coupon.money | currency:" - $"}}</span>
+                    <input type="tel" ng-model="goods.couponMoney" ng-change="calculatePrice()" integer select-on-click>
+                    <span>{{coupon.money || 0 | currency:" - $"}}</span>
                 </div>
                 <div class="item input-row input-row-span">
                     <span>共优惠</span>
-                    <span>{{goods.couponCount | currency}}，{{goods.couponCount * settings.rate | currency:"￥"}}</span>
+                    <span>{{goods.couponCount || 0 | currency}}，{{goods.couponCount * settings.rate || 0 | currency:"￥"}}</span>
                 </div>
                 <div class="item input-row input-row-span">
                     <span>采购成本价</span>
-                    <span>{{goods.purchasePrice | currency}}，{{goods.purchasePrice * settings.rate | currency:"￥"}}</span>
+                    <span>{{goods.purchasePrice || 0 | currency}}，{{goods.purchasePrice * settings.rate || 0 | currency:"￥"}}</span>
                     <button class="button button-small" ng-click="settings.toggleCost = !settings.toggleCost">Other cost</button>
                 </div>
 

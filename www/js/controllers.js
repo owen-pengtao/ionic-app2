@@ -80,16 +80,16 @@ angular.module('starter.controllers', ['starter.services'])
         }
 
         $scope.calculatePrice = function () {
-            $scope.goods.couponStore = $scope.goods.couponStore || 0;
-            $scope.goods.couponOff   = $scope.goods.couponOff || 0;
-            $scope.goods.couponMoney = $scope.goods.couponMoney || 0;
-
-            $scope.coupon.store = round2($scope.goods.tagPrice * $scope.goods.couponStore / 100, 2);
+            $scope.coupon.store = round2($scope.goods.tagPrice * $scope.goods.couponStore / 100, 2) || 0;
             if ($scope.goods.couponOff) {
                 $scope.coupon.off = round2(($scope.goods.tagPrice - $scope.coupon.store) * $scope.goods.couponOff / 100, 2);
+            }else{
+                $scope.coupon.off = 0;
             }
             if ($scope.goods.couponMoney) {
                 $scope.coupon.money = Math.abs($scope.goods.couponMoney);
+            }else{
+                $scope.coupon.money = 0;
             }
             $scope.goods.couponCount = $scope.coupon.store + $scope.coupon.off + $scope.coupon.money;
 
@@ -156,4 +156,34 @@ angular.module('starter.controllers', ['starter.services'])
                 $scope.saveSetting();
             });
         };
+    })
+		.directive('integer', function(){
+		  return {
+		    require: 'ngModel',
+		    link: function(scope, ele, attr, ctrl){
+		      ctrl.$parsers.unshift(function(viewValue){
+		        return parseInt(viewValue, 10);
+		      });
+		    }
+		  };
+		})
+		.directive('number', function(){
+		  return {
+		    require: 'ngModel',
+		    link: function(scope, ele, attr, ctrl){
+		      ctrl.$parsers.unshift(function(viewValue){
+		        return Number(viewValue);
+		      });
+		    }
+		  };
+		})
+		.directive('selectOnClick', function () {
+      return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+          element.on('click', function () {
+              this.select();
+          });
+        }
+      };
     });
