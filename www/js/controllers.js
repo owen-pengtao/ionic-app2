@@ -162,7 +162,7 @@ angular.module('starter.controllers', ['starter.services'])
 		    require: 'ngModel',
 		    link: function(scope, ele, attr, ctrl){
 		      ctrl.$parsers.unshift(function(viewValue){
-		        return parseInt(viewValue, 10);
+		        return viewValue ? parseInt(viewValue, 10) : 0;
 		      });
 		    }
 		  };
@@ -172,7 +172,7 @@ angular.module('starter.controllers', ['starter.services'])
 		    require: 'ngModel',
 		    link: function(scope, ele, attr, ctrl){
 		      ctrl.$parsers.unshift(function(viewValue){
-		        return Number(viewValue);
+		        return viewValue ? Number(viewValue) : 0;
 		      });
 		    }
 		  };
