@@ -47,10 +47,10 @@
             <tbody>
             <tr ng-repeat="price in prices" on-tap="onTapRow($event)">
                 <td>{{ price | currency}}</td>
-                <td>{{ price * (1 - tagPrice.offStore/100) | currency}}</td>
-                <td>{{ price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney | currency}}</td>
-                <td>{{ (price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney) * (1 + settings.tax/100) | currency}}</td>
-                <td>{{ (price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney) * (1 + settings.tax/100) * settings.rate | currency:"￥"}}</td>
+                <td>{{ price * (1 - tagPrice.offStore/100) || price | currency}}</td>
+                <td>{{ price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney || price | currency}}</td>
+                <td>{{ (price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney || price) * (1 + settings.tax/100) | currency}}</td>
+                <td>{{ (price * (1 - tagPrice.offStore/100) * (1 - tagPrice.offCoupon/100) - tagPrice.offMoney || price) * (1 + settings.tax/100) * settings.rate | currency:"￥"}}</td>
             </tr>
             </tbody>
         </table>
